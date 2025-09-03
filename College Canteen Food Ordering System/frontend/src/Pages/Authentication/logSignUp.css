@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./canteen-bg.jpg');
+    background-size: cover; /* Adjust how the image fits */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: blur(3px);
+  }
+
+  .password-container {
+    position: relative;
+    display: inline-block;
+}
+
+.toggle-password {
+    position: relative;
+    right: 45px;
+    top: 3%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none; 
+}
+
+.login-container {
+    background: whitesmoke;
+    border-radius: 15px;
+    box-shadow: inset -20px -18px 14px 0px rgba(10, 8, 8, 0.2);
+    width: 380px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-logo {
+    display: flex;
+    text-align: center;
+    color: #440511;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    }
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 50px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-group-text {
+    width: 10%;
+}
+
+.input-group #user {
+    width: 100%;
+    padding: 15px 50px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-group #user:focus {
+    border-color: #ff2d55;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255,45,85,0.1);
+}
+
+.input-group input:focus {
+    border-color: #ff2d55;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255,45,85,0.1);
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+.input-group input:focus + i {
+    color: #ff2d55;
+}
+
+.login-btn {
+width: 100%;
+padding: 15px;
+background: linear-gradient(135deg, #0bb6e3 0%, #cd2ed2 100%);
+color: #e9dfea;
+border: none;
+border-radius: 10px;
+font-size: 18px;
+cursor: pointer;
+transition: transform 0.2s ease;
+}
+
+.login-btn:hover {
+    transform: scale(1.05);
+    color: #e80e36;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #141414;
+}
+
+.signup-link a {
+    color: #e80e36;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.warnings-success {
+    color: green;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.warnings-failed {
+    color: red;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
